@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sweetie Pie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            color: #d81b60;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .image-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .image-box:nth-child(odd) {
+            flex-direction: row;
+        }
+        .image-box:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .preview {
+            width: 50%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        textarea {
+            width: 45%;
+            height: 80px;
+            margin-top: 10px;
+            border: 1px solid #d81b60;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .cute-button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .cute-button:hover {
+            background-color: #ff1493;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Untuk U Bby <3</h2>
+        <div class="image-container">
+            <div class="image-box">
+                <img class="preview" src="Athirah.jpg" alt="Gambar 1">
+                <div class="text-box">Dalam keheningan malam, ku rindukan senyumanmu yang seumpama bintang yang bersinar terang di langit.</div>
+            </div>
+            <div class="image-box">
+                <img class="preview" src="Atirah2.jpg" alt="Gambar 2">
+                <div class="text-box">Setiap kali ku pandang ke arahmu, ku merasa terpesona oleh kecantikanmu yang seumpama bunga yang merekah di pagi hari.</div>
+            </div>
+            <div class="image-box">
+                <img class="preview" src="Atirah3.jpg" alt="Gambar 3">
+                <div class="text-box">Dalam hidupku, engkau adalah anugerah terindah dari Tuhan yang mampu menyelamatkan jiwaku yang tersesat.</div>
+            </div>
+            <div class="image-box">
+                <img class="preview" src="Atirah4.jpg" alt="Gambar 4">
+                <div class="text-box">Engkau adalah cinta yang selalu ada dalam hatiku, meleburkan kepedihan dan kesedihan yang pernah ku alami.</div>
+            </div>
+            <div class="image-box">
+                <img class="preview" src="Atirah5.jpg" alt="Gambar 5">
+                <div class="text-box">Mencintai itu mudah. Dicintai juga mudah tetapi untuk dicintai orang yang kita cintai teramat sukar.</div>
+            </div>
+        </div>
+        <button class="cute-button" onclick="nextPage()">Seterusnya 💖</button>
+    </div>
+
+    <script>
+        function nextPage() {
+             window.location.href = 'AiNextPage3.html'; // Uncomment untuk navigation sebenar
+        }
+</script>
+<!-- Other Script (separate from music) -->
+<script src="OthersScript.js"></script>
+
+
+
+</body>
+</html>

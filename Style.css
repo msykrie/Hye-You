@@ -1,0 +1,50 @@
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+img {
+    animation: wiggle 0s infinite;
+}
+
+.buttons:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 8px rgba(255, 117, 140, 0.5);
+}
+
+.buttons {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Warna pastel pink */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 154, 158, 0.4);
+    text-align: center;
+    user-select: none; /* Elak text ter-highlight */
+}
+
+.buttons:hover {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    box-shadow: 0px 6px 12px rgba(255, 117, 140, 0.5);
+}
+
+.buttons:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 8px rgba(255, 117, 140, 0.5);
+}
+
+body {
+    background-color: #fbe0eb;
+}
+
+.A2-gif {
+    width: 50px;  /* Saiz lebar tetap */
+    height: 50px; /* Saiz tinggi tetap */
+}

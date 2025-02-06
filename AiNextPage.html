@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sweetie Pie</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Pink cair */
+            text-align: center;
+            padding: 50px;
+        }
+
+        h2 {
+            color: #d81b60;
+            font-size: 2em;
+        }
+
+        .pin-input {
+            font-size: 24px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #d81b60;
+            background-color: #f8bbd0; /* Warna pink lembut */
+            transition: all 0.3s ease;
+        }
+
+        .pin-input:focus {
+            border-color: #8e24aa; /* Pink gelap apabila difokus */
+            background-color: #f06292; /* Warna pink lebih gelap */
+        }
+
+        button {
+            background-color: #d81b60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        .A2-gif {
+    width: 200px;  /* Saiz lebar tetap */
+    height: 200px; /* Saiz tinggi tetap */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <img src="A2.gif" alt="gif" class="A2-gif">
+    <h2>Masukkan No.yang berkaitan dengan No.Tel i,hehe <3</h2>
+    
+    <form id="pinForm">
+        <input type="password" id="pin1" class="pin-input" maxlength="1" />
+        <input type="password" id="pin2" class="pin-input" maxlength="1" />
+        <input type="password" id="pin3" class="pin-input" maxlength="1" />
+        <input type="password" id="pin4" class="pin-input" maxlength="1" />
+    </form>
+
+    <script>
+        document.querySelectorAll('.pin-input').forEach(function(input, index, inputs) {
+            input.addEventListener('input', function() {
+                // Fokuskan ke input seterusnya selepas satu digit dimasukkan
+                if (input.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+
+                // Jika semua input lengkap, semak PIN
+                if (inputs[0].value && inputs[1].value && inputs[2].value && inputs[3].value) {
+                    let pin = '';
+                    pin += document.getElementById('pin1').value;
+                    pin += document.getElementById('pin2').value;
+                    pin += document.getElementById('pin3').value;
+                    pin += document.getElementById('pin4').value;
+
+                    if (pin === '5204') {
+                        // Redirect ke halaman seterusnya apabila PIN betul
+                        window.location.href = 'AiNextPage2.html'; // Tukar dengan URL halaman yang sesuai
+                    } else {
+                        alert('PIN salah. Sila cuba lagi.');
+                        // Kosongkan input jika PIN salah
+                        inputs.forEach(input => input.value = '');
+                        inputs[0].focus(); // Fokus semula ke input pertama
+                    }
+                }
+            });
+        });
+    </script>
+
+<!-- Other Script (separate from music) -->
+<script src="OthersScript.js"></script>
+
+
+
+</body>
+</html>
